@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS victvs_data;
+
+CREATE DATABASE victvs_data;
