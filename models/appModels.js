@@ -37,4 +37,20 @@ const fetchData = (order = 'desc', sort_by = 'Date', candidatename, locationname
         });
     }
 }
-module.exports = {fetchData}
+
+
+const fetchSpecificData = (id) => {
+    const queryString = 'SELECT * FROM data WHERE id = $1;'
+    const params = []
+
+    if (typeof +id !== 'number'){
+        return Promise.reject({status: 400, msg: 'BAD REQUEST'})
+    } else {
+        params.push(id)
+    }
+
+    return db.query(queryString, params).then(({rows}) => {
+        return rows
+    })
+}
+module.exports = {fetchData, fetchSpecificData}
