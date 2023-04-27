@@ -131,4 +131,16 @@ describe('testing QUERIES', () => {
             })
         })
     })
+    test('200: search by id', () => {
+        return request(app)
+        .get('/api/data?Id=1')
+        .expect(200)
+        .then((result) => {
+            const {body} = result
+            const data = body.data
+            const datapoint = data[0]
+            expect(datapoint).toHaveProperty('id', 1)
+            expect(datapoint).toHaveProperty('title', 'VICTVS1')
+        })
+    })
 })
