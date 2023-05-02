@@ -1,7 +1,7 @@
 const e = require('express');
 const db = require('../db/connection.js')
 
-const fetchData = (order = 'desc', sort_by = 'Date', candidatename, locationname, id ) => {
+const fetchData = (order = 'desc', sort_by = 'Date', candidatename, locationname, id, ) => {
     const greenlistedSortBys = ['CandidateName', 'Date', 'LocationName'];
     const greenlistedOrders = ['asc', 'desc'];
 
@@ -9,7 +9,6 @@ const fetchData = (order = 'desc', sort_by = 'Date', candidatename, locationname
     const params = [];
 
     if (id !== undefined) {
-        console.log(id)
         queryString += ' WHERE id = $1';
         params.push(id);
     } else if (candidatename && locationname !== undefined ){

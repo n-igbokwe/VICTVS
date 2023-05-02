@@ -8,8 +8,8 @@
       "CandidateName": "Wilmers",
       "Date": "05/05/2023 14:30:00",
       "LocationName": "London",
-      "Latitude": 51.507351,
-      "Longitude": -0.127758
+      "Latitude": 360,
+      "Longitude": -360
     },
     {
       "id": 1,

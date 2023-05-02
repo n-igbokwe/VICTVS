@@ -34,9 +34,9 @@ const seed = (data) => {
         )
         return db.query(insertData)
         })
-        // .catch((err) => {
-        //     console.log(err)
-        // })
+        .catch((err) => {
+            console.log(err)
+        })
 };
 
 module.exports = seed;
