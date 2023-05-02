@@ -5,7 +5,7 @@
       "Title": "VICTVS1",
       "Description": "VICTVS Exam 1",
       "Candidateid": 0,
-      "CandidateName": "Wilmers",
+      "CandidateName": "TESTNAME",
       "Date": "05/05/2023 14:30:00",
       "LocationName": "London",
       "Latitude": 360,
